@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mcp-fleet-doctor": {
+      "command": "python",
+      "args": ["/absolute/path/to/mcp-fleet-doctor/run.py"]
+    }
+  }
+}

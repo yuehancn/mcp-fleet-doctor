@@ -1,0 +1,31 @@
+{
+  "runtime": { "type": "python", "version": ">=3.8" },
+  "env": {
+    "MCP_FLEET_DOCTOR_BASELINE": "$HOME/.mcp-fleet-doctor/baseline.json"
+  },
+  "init": {
+    "darwin": "python -m pip install --upgrade git+https://github.com/yuehancn/mcp-fleet-doctor@v1.0.0",
+    "linux": "python -m pip install --upgrade git+https://github.com/yuehancn/mcp-fleet-doctor@v1.0.0",
+    "win32": "python -m pip install --upgrade git+https://github.com/yuehancn/mcp-fleet-doctor@v1.0.0"
+  },
+  "unAuth": {
+    "darwin": "mcp-fleet-doctor unAuth",
+    "linux": "mcp-fleet-doctor unAuth",
+    "win32": "mcp-fleet-doctor unAuth"
+  },
+  "status": {
+    "darwin": "mcp-fleet-doctor status",
+    "linux": "mcp-fleet-doctor status",
+    "win32": "mcp-fleet-doctor status"
+  },
+  "statusMatch": "Ready",
+  "versionCheck": {
+    "command": {
+      "darwin": "mcp-fleet-doctor --version",
+      "linux": "mcp-fleet-doctor --version",
+      "win32": "mcp-fleet-doctor --version"
+    },
+    "minVersion": "1.0.0",
+    "versionPattern": "(\\d+\\.\\d+\\.\\d+)"
+  }
+}

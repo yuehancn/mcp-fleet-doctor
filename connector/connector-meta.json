@@ -1,0 +1,22 @@
+{
+  "name": "MCP 集群体检",
+  "name_zh": "MCP 集群体检",
+  "name_en": "MCP Fleet Doctor",
+  "description": "What died, what silently grew, what carries risk in your MCP server fleet.",
+  "description_zh": "排查 MCP 服务器集群：哪些已经起不来、哪些升级后偷偷变胖多吃了上下文、哪些配置带风险。录制一次基线，之后每次体检都能看出变化。",
+  "description_en": "Health, drift and configuration risk for an MCP server fleet: dead servers, silently grown tool lists, and unsafe config flags. Record a baseline once, then see what changed.",
+  "source": "mcp-fleet-doctor",
+  "type": "cli",
+  "version": "1.0.0",
+  "examples_zh": [
+    "我的 MCP 服务器有没有已经不工作的",
+    "最近升级之后 agent 变慢了，是不是哪个服务器变胖了",
+    "检查一下我的 MCP 配置有没有安全问题"
+  ],
+  "examples_en": [
+    "Are any of my MCP servers dead?",
+    "The agent got slower after upgrades — did a server silently grow?",
+    "Check my MCP config for security problems"
+  ],
+  "minWorkbuddyVersion": "5.0.0"
+}

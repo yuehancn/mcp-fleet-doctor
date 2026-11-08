@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-fleet-doctor"
+version = "1.0.0"
+description = "Post-install health, drift and config risk for an MCP server fleet"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Commercial" }
+authors = [{ name = "Yuehan" }]
+keywords = ["mcp", "fleet-health", "config-drift", "ai-agents"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+mcp-fleet-doctor = "src.cli:main"
+
+[tool.setuptools]
+packages = ["src"]

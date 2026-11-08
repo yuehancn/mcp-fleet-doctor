@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#0e4f4a"/>
+      <stop offset="100%" stop-color="#062a27"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2bb5a0"/>
+      <stop offset="55%" stop-color="#5ff0d2"/>
+      <stop offset="100%" stop-color="#2bb5a0"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#bg2)"/>
+
+  <!-- Inside a centred 168px safe circle. -->
+  <g>
+    <rect x="62" y="66" width="58" height="38" rx="8" fill="#155e55"
+          stroke="#5ff0d2" stroke-width="5"/>
+    <rect x="136" y="66" width="58" height="38" rx="8" fill="#155e55"
+          stroke="#5ff0d2" stroke-width="5"/>
+    <rect x="62" y="118" width="58" height="38" rx="8" fill="#155e55"
+          stroke="#5ff0d2" stroke-width="5"/>
+    <!-- dead node -->
+    <rect x="136" y="118" width="58" height="38" rx="8" fill="#0a3a36"
+          stroke="#6a9d95" stroke-width="5" stroke-dasharray="8 6"/>
+    <line x1="150" y1="131" x2="180" y2="143" stroke="#6a9d95" stroke-width="5"
+          stroke-linecap="round"/>
+    <line x1="180" y1="131" x2="150" y2="143" stroke="#6a9d95" stroke-width="5"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Heartbeat trace -->
+  <path d="M56 194 H82 L92 176 L108 212 L122 188 L132 198 H200"
+        fill="none" stroke="url(#pulse)" stroke-width="9"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
