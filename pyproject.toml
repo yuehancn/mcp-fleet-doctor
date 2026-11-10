@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Post-install health, drift and config risk for an MCP server fleet"
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "Commercial" }
+license = { text = "MIT" }
 authors = [{ name = "Yuehan" }]
 keywords = ["mcp", "fleet-health", "config-drift", "ai-agents"]
 classifiers = [

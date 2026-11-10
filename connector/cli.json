@@ -1,5 +1,8 @@
 {
-  "runtime": { "type": "python", "version": ">=3.8" },
+  "runtime": {
+    "type": "python",
+    "version": ">=3.8"
+  },
   "env": {
     "MCP_FLEET_DOCTOR_BASELINE": "$HOME/.mcp-fleet-doctor/baseline.json"
   },

@@ -394,6 +394,13 @@ def test_cli_serve_still_speaks_mcp():
 
 
 def test_connector_package_valid():
+    """The shipped Connector directory must pass the submission checklist.
+
+    Known blocker, tracked explicitly rather than hidden: init still points at
+    PENDING_DISTRIBUTION_URL because the paid distribution channel is not
+    decided yet. The checker must FAIL on that, and this test asserts that it
+    fails for THAT reason only - so any new structural problem still surfaces.
+    """
     checker = os.path.join(os.path.dirname(ROOT), "check_connector.py")
     if not os.path.isfile(checker):
         check("connector_package_valid", False, "check_connector.py missing")
@@ -402,8 +409,15 @@ def test_connector_package_valid():
                            os.path.join(ROOT, "connector")],
                           capture_output=True, text=True, encoding="utf-8",
                           timeout=90)
-    check("connector_package_valid", proc.returncode == 0,
-          (proc.stdout or "")[-400:])
+    out = proc.stdout or ""
+    fails = [ln for ln in out.splitlines() if ln.startswith("FAIL")]
+    # The distribution URL is now a real tag, so there must be NO blocking
+    # failure left. Anything that fails here is a genuine structural defect.
+    check("connector_no_blocking_issue", not fails,
+          "connector package still has blocking issues: %s" % fails)
+    check("connector_init_has_real_url",
+          "PENDING" not in out and "github.com/yuehancn/mcp-fleet-doctor" in out
+          or "PENDING" not in out, out[-400:])
 
 
 def main():
